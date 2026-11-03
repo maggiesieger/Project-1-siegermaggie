@@ -1,13 +1,18 @@
-* {
-  box-sizing: border-box;
-}
+
+/* Project One — recreated from the supplied Figma file */
 
 :root {
-  --olive: #505c2e;
-  --olive-dark: #303b1d;
-  --cream: #fff8df;
-  --orange: #c66b19;
-  --ink: #171a12;
+  --olive: #303d1b;
+  --olive-dark: #263316;
+  --cream: #fff9df;
+  --orange: #bd681b;
+  --moment-orange: #dfa45f;
+  --white: #fffaf0;
+  --ink: #20251a;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 html {
@@ -17,477 +22,192 @@ html {
 body {
   margin: 0;
   background: var(--cream);
-  color: var(--cream);
+  color: var(--ink);
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.portfolio {
+/* Top navigation */
+.site-header {
+  min-height: 48px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background: var(--olive);
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: clamp(18px, 3vw, 48px);
+}
+
+.navigation a {
+  color: var(--cream);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+}
+
+.navigation a:hover {
+  opacity: 0.7;
+}
+
+/* Large green title area */
+.hero {
+  min-height: 270px;
+  padding: 42px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: var(--olive);
+  color: var(--cream);
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(54px, 8vw, 108px);
+  line-height: 0.86;
+  letter-spacing: -0.055em;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+/* Shared section layout */
+.content-section {
+  padding: 56px 8%;
+}
+
+.feature-card {
+  width: min(100%, 960px);
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* Typefaces block */
+.typefaces {
+  background: var(--cream);
+}
+
+.type-card {
+  background: var(--orange);
+  color: var(--white);
+  padding: clamp(20px, 4vw, 48px);
+}
+
+.type-card img {
+  display: block;
   width: 100%;
-  min-height: 100vh;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  max-height: 440px;
+  object-fit: contain;
+  margin: 0 auto 28px;
+}
+
+.type-copy {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 11px;
+}
+
+h2 {
+  margin: 0 0 18px;
+  font-size: clamp(32px, 5vw, 58px);
+  line-height: 0.95;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.description {
+  max-width: 680px;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* In the Moment block */
+.moment {
   background: var(--cream);
+  padding-top: 12px;
+  padding-bottom: 70px;
 }
 
-.column {
-  min-width: 0;
-  padding: 0 10px 28px;
-  background: var(--cream);
-  border-right: 5px solid var(--ink);
-  color: var(--olive-dark);
+.moment-card {
+  padding: clamp(20px, 4vw, 48px);
+  background: var(--moment-orange);
+  color: var(--white);
 }
 
-.column:last-child {
-  border-right: 0;
+.moment-card h2 {
+  margin-bottom: 24px;
 }
 
-.column-nav {
-  height: 17px;
-  margin: 0 -10px;
-  padding: 3px 9px 0;
+.moment-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 560px;
+  object-fit: cover;
+}
+
+.moment-card .description {
+  margin-top: 24px;
+}
+
+/* Footer */
+.site-footer {
   display: flex;
   justify-content: space-between;
-  gap: 3px;
-  overflow: hidden;
+  gap: 20px;
+  padding: 24px 8%;
   background: var(--olive-dark);
   color: var(--cream);
-  font-size: 5px;
-  line-height: 1;
-  letter-spacing: .08em;
-  white-space: nowrap;
-}
-
-.section-title {
-  height: 45px;
-  margin: 0 -10px 10px;
-  padding: 5px 4px 3px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--olive-dark);
-  color: var(--cream);
-  text-align: center;
-  text-transform: uppercase;
-  font-size: clamp(19px, 2.2vw, 34px);
-  line-height: .88;
-  letter-spacing: -.035em;
-}
-
-.orange-feature {
-  margin: 13px 0 25px;
-  min-height: 145px;
-  padding: 12px 14px;
-  background: var(--orange);
-  color: var(--cream);
-  text-align: center;
-}
-
-.orange-feature h2,
-.moment-feature h2 {
-  margin: 0 0 8px;
-  font-size: 13px;
-  line-height: 1;
-}
-
-.type-mini {
-  display: block;
-  width: 90%;
-  height: 38px;
-  margin: 0 auto 7px;
-  object-fit: cover;
-  mix-blend-mode: multiply;
-}
-
-.orange-feature p,
-.moment-feature p,
-.olive-copy p,
-.orange-copy p {
-  margin: 5px auto 0;
-  max-width: 95%;
-  font-size: 8px;
-  line-height: 1.45;
-}
-
-.moment-feature {
-  margin-top: 25px;
-  padding: 10px 10px 12px;
-  background: var(--orange);
-  color: var(--cream);
-  text-align: center;
-}
-
-.moment-feature img {
-  display: block;
-  width: 68%;
-  height: 54px;
-  margin: 8px auto;
-  object-fit: cover;
-}
-
-.type-banner {
-  margin: 10px 0 13px;
-  height: 55px;
-  overflow: hidden;
-  background: var(--cream);
-}
-
-.type-banner img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-.olive-copy {
-  margin: 0 0 14px;
-  min-height: 60px;
-  padding: 12px 13px;
-  display: flex;
-  align-items: center;
-  background: var(--olive);
-  color: var(--cream);
-  text-align: center;
-}
-
-.olive-copy p {
-  font-size: 8px;
-}
-
-.specimen {
-  padding: 9px 10px 10px;
-  color: var(--cream);
-}
-
-.orange-specimen {
-  background: #dda05c;
-}
-
-.aa {
-  width: 47px;
-  height: 35px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #f3d8ad;
-  color: #fff;
-  font: italic bold 23px Georgia, serif;
-}
-
-.specimen-copy {
-  margin: -32px 0 9px 58px;
-  min-height: 31px;
-  font-size: 6px;
-  line-height: 1.35;
-}
-
-.sample-row {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 7px;
-}
-
-.sample {
-  min-height: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  background: #293b35;
   font-size: 10px;
-  text-align: center;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
-.sample.serif {
-  background: #173b49;
-  font: italic bold 11px Georgia, serif;
-}
-
-.sample.sans {
-  background: #182b2b;
-  font: bold 11px Arial, sans-serif;
-}
-
-.sample.slab {
-  background: #263b31;
-  font: bold 11px Georgia, serif;
-}
-
-.second-specimen {
-  margin-top: 10px;
-}
-
-.sample.montagu {
-  background: #f5e8cf;
-  color: #222;
-  font: bold 11px Georgia, serif;
-}
-
-.sample.black {
-  background: #050505;
-  font: bold 11px Arial, sans-serif;
-}
-
-.sample.type-image {
-  overflow: hidden;
-  background: white;
-}
-
-.sample.type-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.orange-rule {
-  position: relative;
-  height: 7px;
-  margin: 16px 0;
-  background: #e5a45e;
-}
-
-.orange-rule i {
-  position: absolute;
-  top: -3px;
-  width: 13px;
-  height: 13px;
-  border-radius: 50%;
-  background: #e5a45e;
-}
-
-.orange-rule i:first-child {
-  left: 0;
-}
-
-.orange-rule i:last-child {
-  right: 0;
-}
-
-.wide-photo {
-  display: block;
-  width: 100%;
-  height: 72px;
-  margin: 10px 0 13px;
-  object-fit: cover;
-}
-
-.orange-copy {
-  min-height: 100px;
-  padding: 14px 13px;
-  display: flex;
-  align-items: center;
-  background: var(--orange);
-  color: var(--cream);
-  text-align: center;
-}
-
-.orange-copy p {
-  font-size: 8px;
-}
-
-.pros-cons {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 9px;
-  color: var(--olive-dark);
-}
-
-.pros-cons article {
-  min-width: 0;
-  padding: 7px;
-  background: var(--olive);
-  color: var(--cream);
-  text-align: center;
-}
-
-.pros-cons h3 {
-  margin: 0 0 8px;
-  font-size: 12px;
-  color: var(--olive-dark);
-}
-
-.pros-cons img {
-  display: block;
-  width: 100%;
-  aspect-ratio: 1.2;
-  margin: 0 auto 7px;
-  object-fit: cover;
-}
-
-.pros-cons p {
-  min-height: 24px;
-  margin: 5px 0 9px;
-  font-size: 7px;
-  line-height: 1.35;
-}
-
-@media (min-width: 900px) {
-  .portfolio {
-    max-width: 1600px;
-    margin: 0 auto;
+/* Responsive layout */
+@media (max-width: 600px) {
+  .site-header {
+    min-height: 44px;
+    padding: 0 14px;
+    justify-content: center;
   }
 
-  .column {
-    padding-left: 22px;
-    padding-right: 22px;
+  .navigation {
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
   }
 
-  .column-nav {
-    margin-left: -22px;
-    margin-right: -22px;
-    padding-left: 18px;
-    padding-right: 18px;
-    height: 24px;
-    font-size: 8px;
+  .navigation a {
+    font-size: 9px;
+    letter-spacing: 0.07em;
   }
 
-  .section-title {
-    margin-left: -22px;
-    margin-right: -22px;
-    height: 75px;
-  }
-
-  .orange-feature {
+  .hero {
     min-height: 230px;
-    padding: 20px;
   }
 
-  .orange-feature h2,
-  .moment-feature h2 {
-    font-size: 20px;
+  .content-section {
+    padding: 34px 7%;
   }
 
-  .type-mini {
-    height: 55px;
+  .moment {
+    padding-top: 8px;
   }
 
-  .orange-feature p,
-  .moment-feature p,
-  .olive-copy p,
-  .orange-copy p {
-    font-size: 11px;
-  }
-
-  .moment-feature img {
-    height: 85px;
-  }
-
-  .type-banner {
-    height: 90px;
-  }
-
-  .olive-copy {
-    min-height: 90px;
-  }
-
-  .specimen {
-    padding: 14px;
-  }
-
-  .aa {
-    width: 65px;
-    height: 48px;
-    font-size: 30px;
-  }
-
-  .specimen-copy {
-    margin: -43px 0 12px 78px;
-    font-size: 9px;
-    min-height: 40px;
-  }
-
-  .sample {
-    min-height: 38px;
-    font-size: 15px;
-  }
-
-  .wide-photo {
-    height: 120px;
-  }
-
-  .orange-copy {
-    min-height: 130px;
-  }
-
-  .pros-cons {
-    gap: 14px;
-  }
-
-  .pros-cons article {
-    padding: 12px;
-  }
-
-  .pros-cons h3 {
-    font-size: 16px;
-  }
-
-  .pros-cons p {
-    font-size: 10px;
-  }
-}
-
-@media (max-width: 650px) {
-  .portfolio {
-    grid-template-columns: 1fr;
-  }
-
-  .column {
-    border-right: 0;
-    border-bottom: 5px solid var(--ink);
-    padding: 0 20px 28px;
-  }
-
-  .column-nav {
-    margin-left: -20px;
-    margin-right: -20px;
-    height: 22px;
-    padding: 5px 15px 0;
-    font-size: 7px;
-  }
-
-  .section-title {
-    margin-left: -20px;
-    margin-right: -20px;
-    height: 72px;
-    font-size: 32px;
-  }
-
-  .orange-feature {
-    min-height: 220px;
-  }
-
-  .type-mini {
-    height: 60px;
-  }
-
-  .moment-feature img {
-    height: 130px;
-  }
-
-  .type-banner {
-    height: 100px;
-  }
-
-  .olive-copy {
-    min-height: 100px;
-  }
-
-  .specimen-copy {
-    font-size: 9px;
-  }
-
-  .sample {
-    min-height: 45px;
-  }
-
-  .wide-photo {
-    height: 170px;
-  }
-
-  .orange-copy {
-    min-height: 120px;
-  }
-
-  .pros-cons {
-    gap: 14px;
+  .site-footer {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
   }
 }
