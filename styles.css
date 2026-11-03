@@ -211,3 +211,283 @@ h2 {
     align-items: center;
   }
 }
+/* Typefaces — recreated from the supplied Figma design */
+
+:root {
+  --olive: #586238;
+  --deep-olive: #303d1b;
+  --cream: #fff9df;
+  --orange: #bd681b;
+  --light-orange: #dfa45f;
+  --pale-orange: #e9b36e;
+  --white: #fffaf0;
+  --ink: #29291f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.site-header {
+  min-height: 48px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background: var(--olive);
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: clamp(18px, 3vw, 48px);
+}
+
+.navigation a {
+  color: var(--cream);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: .12em;
+}
+
+.navigation a:hover {
+  opacity: .7;
+}
+
+.hero {
+  min-height: 390px;
+  padding: 34px 7% 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  background: var(--deep-olive);
+  color: var(--cream);
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(42px, 6vw, 76px);
+  line-height: .95;
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.hero img {
+  display: block;
+  width: min(100%, 760px);
+  max-height: 170px;
+  object-fit: contain;
+  background: var(--white);
+}
+
+.intro {
+  width: min(100% - 48px, 960px);
+  margin: 44px auto 32px;
+  padding: 26px 34px;
+  background: var(--olive);
+  color: var(--cream);
+  text-align: center;
+}
+
+.intro p {
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.typeface-list {
+  width: min(100% - 48px, 960px);
+  margin: 0 auto;
+  padding-bottom: 54px;
+}
+
+.typeface-card {
+  display: grid;
+  grid-template-columns: 150px minmax(180px, 1fr);
+  gap: 22px;
+  align-items: center;
+  padding: 28px;
+  background: var(--orange);
+  color: var(--white);
+}
+
+.sample {
+  min-height: 110px;
+  display: grid;
+  place-items: center;
+  background: #d9954c;
+  color: var(--white);
+}
+
+.sample span {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 54px;
+}
+
+.sample.mogra span {
+  font-family: cursive;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.typeface-info h2 {
+  margin: 0 0 10px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(22px, 3vw, 34px);
+}
+
+.typeface-info p {
+  max-width: 500px;
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.examples {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.examples img {
+  display: block;
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+  background: #111;
+}
+
+.range {
+  height: 42px;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--light-orange);
+}
+
+.range::before {
+  content: "";
+  width: 82%;
+  height: 2px;
+  background: var(--white);
+}
+
+.range span {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--white);
+  box-shadow: 0 0 0 0 var(--white);
+}
+
+.moment {
+  padding: 55px 8%;
+  background: var(--cream);
+  text-align: center;
+}
+
+.moment h2 {
+  margin: 0 0 28px;
+  color: var(--deep-olive);
+  font-size: clamp(32px, 5vw, 54px);
+  text-transform: uppercase;
+}
+
+.moment-gallery {
+  width: min(100%, 960px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.moment-gallery img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 24px 8%;
+  background: var(--deep-olive);
+  color: var(--cream);
+  font-size: 10px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 650px) {
+  .site-header {
+    justify-content: center;
+    padding: 0 14px;
+  }
+
+  .navigation {
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .navigation a {
+    font-size: 9px;
+  }
+
+  .hero {
+    min-height: 300px;
+  }
+
+  .intro,
+  .typeface-list {
+    width: calc(100% - 28px);
+  }
+
+  .typeface-card {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .examples {
+    grid-template-columns: 1fr;
+  }
+
+  .examples img {
+    height: 150px;
+  }
+
+  .moment-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .moment-gallery img {
+    height: auto;
+    max-height: 280px;
+  }
+
+  .site-footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
