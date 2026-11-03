@@ -1,5 +1,4 @@
-
-  * {
+* {
   box-sizing: border-box;
 }
 
@@ -94,7 +93,296 @@ body {
   display: block;
   width: 90%;
   height: 38px;
-  margin: 0 auto 7px;}
+  margin: 0 auto 7px;
+  object-fit: cover;
+  mix-blend-mode: multiply;
+}
+
+.orange-feature p,
+.moment-feature p,
+.olive-copy p,
+.orange-copy p {
+  margin: 5px auto 0;
+  max-width: 95%;
+  font-size: 8px;
+  line-height: 1.45;
+}
+
+.moment-feature {
+  margin-top: 25px;
+  padding: 10px 10px 12px;
+  background: var(--orange);
+  color: var(--cream);
+  text-align: center;
+}
+
+.moment-feature img {
+  display: block;
+  width: 68%;
+  height: 54px;
+  margin: 8px auto;
+  object-fit: cover;
+}
+
+.type-banner {
+  margin: 10px 0 13px;
+  height: 55px;
+  overflow: hidden;
+  background: var(--cream);
+}
+
+.type-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.olive-copy {
+  margin: 0 0 14px;
+  min-height: 60px;
+  padding: 12px 13px;
+  display: flex;
+  align-items: center;
+  background: var(--olive);
+  color: var(--cream);
+  text-align: center;
+}
+
+.olive-copy p {
+  font-size: 8px;
+}
+
+.specimen {
+  padding: 9px 10px 10px;
+  color: var(--cream);
+}
+
+.orange-specimen {
+  background: #dda05c;
+}
+
+.aa {
+  width: 47px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f3d8ad;
+  color: #fff;
+  font: italic bold 23px Georgia, serif;
+}
+
+.specimen-copy {
+  margin: -32px 0 9px 58px;
+  min-height: 31px;
+  font-size: 6px;
+  line-height: 1.35;
+}
+
+.sample-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 7px;
+}
+
+.sample {
+  min-height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background: #293b35;
+  font-size: 10px;
+  text-align: center;
+}
+
+.sample.serif {
+  background: #173b49;
+  font: italic bold 11px Georgia, serif;
+}
+
+.sample.sans {
+  background: #182b2b;
+  font: bold 11px Arial, sans-serif;
+}
+
+.sample.slab {
+  background: #263b31;
+  font: bold 11px Georgia, serif;
+}
+
+.second-specimen {
+  margin-top: 10px;
+}
+
+.sample.montagu {
+  background: #f5e8cf;
+  color: #222;
+  font: bold 11px Georgia, serif;
+}
+
+.sample.black {
+  background: #050505;
+  font: bold 11px Arial, sans-serif;
+}
+
+.sample.type-image {
+  overflow: hidden;
+  background: white;
+}
+
+.sample.type-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.orange-rule {
+  position: relative;
+  height: 7px;
+  margin: 16px 0;
+  background: #e5a45e;
+}
+
+.orange-rule i {
+  position: absolute;
+  top: -3px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #e5a45e;
+}
+
+.orange-rule i:first-child {
+  left: 0;
+}
+
+.orange-rule i:last-child {
+  right: 0;
+}
+
+.wide-photo {
+  display: block;
+  width: 100%;
+  height: 72px;
+  margin: 10px 0 13px;
+  object-fit: cover;
+}
+
+.orange-copy {
+  min-height: 100px;
+  padding: 14px 13px;
+  display: flex;
+  align-items: center;
+  background: var(--orange);
+  color: var(--cream);
+  text-align: center;
+}
+
+.orange-copy p {
+  font-size: 8px;
+}
+
+.pros-cons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9px;
+  color: var(--olive-dark);
+}
+
+.pros-cons article {
+  min-width: 0;
+  padding: 7px;
+  background: var(--olive);
+  color: var(--cream);
+  text-align: center;
+}
+
+.pros-cons h3 {
+  margin: 0 0 8px;
+  font-size: 12px;
+  color: var(--olive-dark);
+}
+
+.pros-cons img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1.2;
+  margin: 0 auto 7px;
+  object-fit: cover;
+}
+
+.pros-cons p {
+  min-height: 24px;
+  margin: 5px 0 9px;
+  font-size: 7px;
+  line-height: 1.35;
+}
+
+@media (min-width: 900px) {
+  .portfolio {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+
+  .column {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .column-nav {
+    margin-left: -22px;
+    margin-right: -22px;
+    padding-left: 18px;
+    padding-right: 18px;
+    height: 24px;
+    font-size: 8px;
+  }
+
+  .section-title {
+    margin-left: -22px;
+    margin-right: -22px;
+    height: 75px;
+  }
+
+  .orange-feature {
+    min-height: 230px;
+    padding: 20px;
+  }
+
+  .orange-feature h2,
+  .moment-feature h2 {
+    font-size: 20px;
+  }
+
+  .type-mini {
+    height: 55px;
+  }
+
+  .orange-feature p,
+  .moment-feature p,
+  .olive-copy p,
+  .orange-copy p {
+    font-size: 11px;
+  }
+
+  .moment-feature img {
+    height: 85px;
+  }
+
+  .type-banner {
+    height: 90px;
+  }
+
+  .olive-copy {
+    min-height: 90px;
+  }
+
+  .specimen {
+    padding: 14px;
+  }
+
   .aa {
     width: 65px;
     height: 48px;
@@ -135,6 +423,7 @@ body {
   .pros-cons p {
     font-size: 10px;
   }
+}
 
 @media (max-width: 650px) {
   .portfolio {
@@ -202,4 +491,3 @@ body {
     gap: 14px;
   }
 }
-
