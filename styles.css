@@ -340,6 +340,13 @@ body {
   font-size: 54px;
 }
 
+.sample.dancing span {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
 .sample.mogra span {
   font-family: cursive;
   font-weight: bold;
